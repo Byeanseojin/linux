@@ -1,0 +1,372 @@
+root@studenj-virtual-machine:~/바탕화면# cd
+root@studenj-virtual-machine:~# dpkg -l telnetd
+dpkg-query: telnetd와 일치하는 패키지를 찾지 못했습니다
+root@studenj-virtual-machine:~# apt-get -y install xinetd telnetd
+패키지 목록을 읽는 중입니다... 완료
+의존성 트리를 만드는 중입니다... 완료
+상태 정보를 읽는 중입니다... 완료        
+다음 새 패키지를 설치할 것입니다:
+  telnetd xinetd
+0개 업그레이드, 2개 새로 설치, 0개 제거 및 1개 업그레이드 안 함.
+147 k바이트 아카이브를 받아야 합니다.
+이 작업 후 420 k바이트의 디스크 공간을 더 사용하게 됩니다.
+받기:1 https://mirrors.edge.kernel.org/ubuntu bionic/universe amd64 xinetd amd64 1:2.3.15.3-1 [108 kB]
+받기:2 https://mirrors.edge.kernel.org/ubuntu bionic/universe amd64 telnetd amd64 0.17-41 [39.3 kB]
+내려받기 147 k바이트, 소요시간 3초 (55.9 k바이트/초)
+Selecting previously unselected package xinetd.
+(데이터베이스 읽는중 ...현재 205558개의 파일과 디렉터리가 설치되어 있습니다.)
+Preparing to unpack .../xinetd_1%3a2.3.15.3-1_amd64.deb ...
+Unpacking xinetd (1:2.3.15.3-1) ...
+Selecting previously unselected package telnetd.
+Preparing to unpack .../telnetd_0.17-41_amd64.deb ...
+Unpacking telnetd (0.17-41) ...
+xinetd (1:2.3.15.3-1) 설정하는 중입니다 ...
+telnetd (0.17-41) 설정하는 중입니다 ...
+사용자 telnetd을(를) utmp 그룹에 등록 중
+Note: xinetd currently is not fully supported by update-inetd.
+Please consult /usr/share/doc/xinetd/README.Debian and itox(8).
+update-inetd: warning: cannot add service, /etc/inetd.conf does not exist
+Processing triggers for man-db (2.10.2-1) ...
+root@studenj-virtual-machine:~# cd /etc/xinetd.d
+root@studenj-virtual-machine:/etc/xinetd.d# nano talnet
+root@studenj-virtual-machine:/etc/xinetd.d# nani talnet
+명령어 'nani' 을(를) 찾을 수 없습니다. 다음 명령어로 시도하시겠습니까:
+  snap nanonano의 명령어 ' (5.7+pkg-4057)'
+  deb nanonano의 명령어 ' (6.2-1)'
+  deb nantnant의 명령어 ' (0.92~rc1+dfsg-7)'
+  deb nabinabi의 명령어 ' (1.0.0-4build1)'
+'snap info <snapname>'에서 추가 버전을 확인하십시오.
+root@studenj-virtual-machine:/etc/xinetd.d# nano talnet
+root@studenj-virtual-machine:/etc/xinetd.d# nani talnet
+명령어 'nani' 을(를) 찾을 수 없습니다. 다음 명령어로 시도하시겠습니까:
+  snap nanonano의 명령어 ' (5.7+pkg-4057)'
+  deb nantnant의 명령어 ' (0.92~rc1+dfsg-7)'
+  deb nabinabi의 명령어 ' (1.0.0-4build1)'
+  deb nanonano의 명령어 ' (6.2-1)'
+'snap info <snapname>'에서 추가 버전을 확인하십시오.
+root@studenj-virtual-machine:/etc/xinetd.d# nano talnet
+root@studenj-virtual-machine:/etc/xinetd.d# nano talnet
+root@studenj-virtual-machine:/etc/xinetd.d# cd
+root@studenj-virtual-machine:~# adduser teluser
+'teluser' 사용자를 추가 중...
+새 그룹 'teluser' (1004) 추가 ...
+새 사용자 'teluser' (1007) 을(를) 그룹 'teluser' (으)로 추가 ...
+'/home/teluser' 홈 디렉터리를 생성하는 중...
+'/etc/skel'에서 파일들을 복사하는 중...
+새 암호: 
+잘못된 비밀번호: 암호는 8 개의 문자 보다 짧습니다
+새 암호 재입력: 
+passwd: 암호를 성공적으로 업데이트했습니다
+teluser의 사용자의 정보를 바꿉니다
+새로운 값을 넣거나, 기본값을 원하시면 엔터를 치세요
+	이름 []: 
+	방 번호 []: 
+	직장 전화번호 []: 
+	집 전화번호 []: 
+	기타 []: 
+정보가 올바릅니까? [Y/n] y
+root@studenj-virtual-machine:~# sustemctl restart xinetd
+명령어 'sustemctl' 을(를) 찾을 수 없습니다. 다음 명령어로 시도하시겠습니까:
+  deb systemctlsystemd의 명령어 ' (249.11-0ubuntu3.7)'
+  deb systemctlsystemctl의 명령어 ' (1.4.4181-1.1)'
+Try: apt install <deb name>
+root@studenj-virtual-machine:~# systemctl restart xinetd
+root@studenj-virtual-machine:~# systemctl enable xinetd
+xinetd.service is not a native service, redirecting to systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable xinetd
+root@studenj-virtual-machine:~# systemdtl status xinetd
+명령어 'systemdtl' 을(를) 찾을 수 없습니다. 다음 명령어로 시도하시겠습니까:
+  deb systemctlsystemd의 명령어 ' (249.11-0ubuntu3.7)'
+  deb systemctlsystemctl의 명령어 ' (1.4.4181-1.1)'
+Try: apt install <deb name>
+root@studenj-virtual-machine:~# systemctl status xunetd
+Unit xunetd.service could not be found.
+root@studenj-virtual-machine:~# systemctl status xinetd
+● xinetd.service - LSB: Starts or stops the xinetd daemon.
+     Loaded: loaded (/etc/init.d/xinetd; generated)
+     Active: active (running) since Tue 2023-05-30 09:39:59 KST; 1min 29s ago
+       Docs: man:systemd-sysv-generator(8)
+      Tasks: 1 (limit: 4575)
+     Memory: 484.0K
+        CPU: 104ms
+     CGroup: /system.slice/xinetd.service
+             └─2439 /usr/sbin/xinetd -pidfile /run/xinetd.pid -stayalive -inetd>
+
+ 5월 30 09:39:59 studenj-virtual-machine xinetd[2439]: Reading included configu>
+ 5월 30 09:39:59 studenj-virtual-machine xinetd[2439]: Reading included configu>
+ 5월 30 09:39:59 studenj-virtual-machine xinetd[2439]: Reading included configu>
+ 5월 30 09:39:59 studenj-virtual-machine xinetd[2439]: Reading included configu>
+ 5월 30 09:39:59 studenj-virtual-machine xinetd[2439]: Reading included configu>
+ 5월 30 09:39:59 studenj-virtual-machine xinetd[2439]: Attribute wait needs a s>
+ 5월 30 09:39:59 studenj-virtual-machine xinetd[2439]: Reading included configu>
+ 5월 30 09:39:59 studenj-virtual-machine xinetd[2439]: Reading included configu>
+ 5월 30 09:39:59 studenj-virtual-machine xinetd[2439]: 2.3.15.3 started with li>
+ 5월 30 09:39:59 studenj-virtual-machine xinetd[2439]: Started working: 0 avail>
+root@studenj-virtual-machine:~# 
+root@studenj-virtual-machine:~# ufw allow 23/tcp
+규칙이 추가되었습니다
+규칙이 추가되었습니다 (v6)
+root@studenj-virtual-machine:~# ifconfig ens32
+ens32: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.116.128  netmask 255.255.255.0  broadcast 192.168.116.255
+        inet6 fe80::6e42:1596:13d6:c9ec  prefixlen 64  scopeid 0x20<link>
+        ether 00:0c:29:f3:85:60  txqueuelen 1000  (Ethernet)
+        RX packets 628  bytes 542097 (542.0 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 253  bytes 40854 (40.8 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+root@studenj-virtual-machine:~# ^C
+root@studenj-virtual-machine:~# ^C
+root@studenj-virtual-machine:~# nano /etc/xinet.d
+root@studenj-virtual-machine:~# nano /etc/xinet.d/telnet
+root@studenj-virtual-machine:~# nano telnet
+root@studenj-virtual-machine:~# cd
+root@studenj-virtual-machine:~# nano talnet
+root@studenj-virtual-machine:~# cd etc 
+bash: cd: etc: 그런 파일이나 디렉터리가 없습니다
+root@studenj-virtual-machine:~# cd /etc
+root@studenj-virtual-machine:/etc# ls
+ModemManager                   fonts            login.defs           rpc
+NetworkManager                 fprintd.conf     logrotate.conf       rsyslog.conf
+PackageKit                     fstab            logrotate.d          rsyslog.d
+UPower                         fuse.conf        lsb-release          rygel.conf
+X11                            fwupd            machine-id           sane.d
+acpi                           gai.conf         magic                security
+adduser.conf                   gdb              magic.mime           selinux
+alsa                           gdm3             mailcap              sensors.d
+alternatives                   geoclue          mailcap.order        sensors3.conf
+anacrontab                     ghostscript      manpath.config       services
+apg.conf                       glvnd            mc                   sgml
+apm                            gnome            mime.types           shadow
+apparmor                       groff            mke2fs.conf          shadow-
+apparmor.d                     group            modprobe.d           shells
+apport                         group-           modules              skel
+appstream.conf                 grub.d           modules-load.d       snmp
+apt                            gshadow          mtab                 speech-dispatcher
+avahi                          gshadow-         nanorc               ssh
+bash.bashrc                    gss              netconfig            ssl
+bash_completion                gtk-2.0          netplan              subgid
+bash_completion.d              gtk-3.0          network              subgid-
+bindresvport.blacklist         hdparm.conf      networkd-dispatcher  subuid
+binfmt.d                       host.conf        networks             subuid-
+bluetooth                      hostid           newt                 sudo.conf
+brlapi.key                     hostname         nftables.conf        sudo_logsrvd.conf
+brltty                         hosts            nsswitch.conf        sudoers
+brltty.conf                    hosts.allow      openvpn              sudoers.d
+ca-certificates                hosts.deny       opt                  sysctl.conf
+ca-certificates.conf           hp               os-release           sysctl.d
+ca-certificates.conf.dpkg-old  ifplugd          pam.conf             systemd
+chatscripts                    init             pam.d                terminfo
+console-setup                  init.d           papersize            thermald
+cracklib                       initramfs-tools  passwd               thunderbird
+cron.d                         inputrc          passwd-              timezone
+cron.daily                     insserv.conf.d   pcmcia               tmpfiles.d
+cron.hourly                    ipp-usb          perl                 ubuntu-advantage
+cron.monthly                   iproute2         pki                  ucf.conf
+cron.weekly                    issue            pm                   udev
+crontab                        issue.net        pnm2ppa.conf         udisks2
+cups                           kernel           polkit-1             ufw
+cupshelpers                    kernel-img.conf  ppp                  update-manager
+dbus-1                         kerneloops.conf  profile              update-motd.d
+dconf                          ld.so.cache      profile.d            update-notifier
+debconf.conf                   ld.so.conf       protocols            usb_modeswitch.conf
+debian_version                 ld.so.conf.d     pulse                usb_modeswitch.d
+default                        ldap             python3              vim
+deluser.conf                   legal            python3.10           vmware-tools
+depmod.d                       libao.conf       rc0.d                vtrgb
+dhcp                           libaudit.conf    rc1.d                vulkan
+dictionaries-common            libblockdev      rc2.d                wgetrc
+dpkg                           libnl-3          rc3.d                wpa_supplicant
+e2scrub.conf                   libpaper.d       rc4.d                xattr.conf
+emacs                          libreoffice      rc5.d                xdg
+environment                    locale.alias     rc6.d                xinetd.conf
+environment.d                  locale.gen       rcS.d                xinetd.d
+ethertypes                     localtime        resolv.conf          xml
+firefox                        logcheck         rmt                  zsh_command_not_found
+root@studenj-virtual-machine:/etc# cd
+root@studenj-virtual-machine:~# cd /etc/xinetd.d
+root@studenj-virtual-machine:/etc/xinetd.d# nano talnet
+root@studenj-virtual-machine:/etc/xinetd.d# cat telnet
+service telnet
+{
+	disable = no
+	flags = REUSE
+	socket_type = stream
+	wait= no
+	user = root 
+	server = /user/sbin/in.telnetd
+	log_on_failure += USERID
+}
+root@studenj-virtual-machine:/etc/xinetd.d# systemctl restart xinetd
+root@studenj-virtual-machine:/etc/xinetd.d# systemctl status xinetd
+● xinetd.service - LSB: Starts or stops the xinetd daemon.
+     Loaded: loaded (/etc/init.d/xinetd; generated)
+     Active: active (running) since Tue 2023-05-30 10:20:19 KST; 14s ago
+       Docs: man:systemd-sysv-generator(8)
+    Process: 2627 ExecStart=/etc/init.d/xinetd start (code=exited, status=0/SUCCESS)
+      Tasks: 1 (limit: 4575)
+     Memory: 484.0K
+        CPU: 105ms
+     CGroup: /system.slice/xinetd.service
+             └─2638 /usr/sbin/xinetd -pidfile /run/xinetd.pid -stayalive -inetd_compat -in>
+
+ 5월 30 10:20:19 studenj-virtual-machine xinetd[2638]: Reading included configuration file>
+ 5월 30 10:20:19 studenj-virtual-machine xinetd[2638]: Reading included configuration file>
+ 5월 30 10:20:19 studenj-virtual-machine xinetd[2638]: Reading included configuration file>
+ 5월 30 10:20:19 studenj-virtual-machine xinetd[2638]: Attribute wait needs a space before>
+ 5월 30 10:20:19 studenj-virtual-machine xinetd[2638]: Reading included configuration file>
+ 5월 30 10:20:19 studenj-virtual-machine xinetd[2638]: Attribute wait needs a space before>
+ 5월 30 10:20:19 studenj-virtual-machine xinetd[2638]: Reading included configuration file>
+ 5월 30 10:20:19 studenj-virtual-machine xinetd[2638]: Reading included configuration file>
+ 5월 30 10:20:19 studenj-virtual-machine xinetd[2638]: 2.3.15.3 started with libwrap loada>
+ 5월 30 10:20:19 studenj-virtual-machine xinetd[2638]: Started working: 0 available servic>
+root@studenj-virtual-machine:/etc/xinetd.d# nano telnet
+root@studenj-virtual-machine:/etc/xinetd.d# systemctl restart xinetd
+root@studenj-virtual-machine:/etc/xinetd.d# systemctl enable xinetd
+xinetd.service is not a native service, redirecting to systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable xinetd
+root@studenj-virtual-machine:/etc/xinetd.d# systemctl status xinetd
+● xinetd.service - LSB: Starts or stops the xinetd daemon.
+     Loaded: loaded (/etc/init.d/xinetd; generated)
+     Active: active (running) since Tue 2023-05-30 10:21:12 KST; 18s ago
+       Docs: man:systemd-sysv-generator(8)
+      Tasks: 1 (limit: 4575)
+     Memory: 484.0K
+        CPU: 76ms
+     CGroup: /system.slice/xinetd.service
+             └─2662 /usr/sbin/xinetd -pidfile /run/xinetd.pid -stayalive -inetd_compat -in>
+
+ 5월 30 10:21:12 studenj-virtual-machine xinetd[2662]: Reading included configuration file>
+ 5월 30 10:21:12 studenj-virtual-machine xinetd[2662]: Attribute wait needs a space before>
+ 5월 30 10:21:12 studenj-virtual-machine xinetd[2662]: Reading included configuration file>
+ 5월 30 10:21:12 studenj-virtual-machine xinetd[2662]: Server /user/sbin/in.telnetd is not>
+ 5월 30 10:21:12 studenj-virtual-machine xinetd[2662]: Error parsing attribute server - DI>
+ 5월 30 10:21:12 studenj-virtual-machine xinetd[2662]: Reading included configuration file>
+ 5월 30 10:21:12 studenj-virtual-machine xinetd[2662]: Reading included configuration file>
+ 5월 30 10:21:12 studenj-virtual-machine xinetd[2662]: removing telnet
+ 5월 30 10:21:12 studenj-virtual-machine xinetd[2662]: 2.3.15.3 started with libwrap loada>
+ 5월 30 10:21:12 studenj-virtual-machine xinetd[2662]: Started working: 0 available servic>
+root@studenj-virtual-machine:/etc/xinetd.d# nano telnet
+root@studenj-virtual-machine:/etc/xinetd.d# systemctl restart xinetd
+root@studenj-virtual-machine:/etc/xinetd.d# systemctl enable xinetd
+xinetd.service is not a native service, redirecting to systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable xinetd
+root@studenj-virtual-machine:/etc/xinetd.d# systemctl status xinetd
+● xinetd.service - LSB: Starts or stops the xinetd daemon.
+     Loaded: loaded (/etc/init.d/xinetd; generated)
+     Active: active (running) since Tue 2023-05-30 10:22:36 KST; 6s ago
+       Docs: man:systemd-sysv-generator(8)
+      Tasks: 1 (limit: 4575)
+     Memory: 496.0K
+        CPU: 102ms
+     CGroup: /system.slice/xinetd.service
+             └─2826 /usr/sbin/xinetd -pidfile /run/xinetd.pid -stayalive -inetd_compat -in>
+
+ 5월 30 10:22:36 studenj-virtual-machine xinetd[2826]: Reading included configuration file>
+ 5월 30 10:22:36 studenj-virtual-machine xinetd[2826]: Reading included configuration file>
+ 5월 30 10:22:36 studenj-virtual-machine xinetd[2826]: Reading included configuration file>
+ 5월 30 10:22:36 studenj-virtual-machine xinetd[2826]: Reading included configuration file>
+ 5월 30 10:22:36 studenj-virtual-machine xinetd[2826]: Attribute wait needs a space before>
+ 5월 30 10:22:36 studenj-virtual-machine xinetd[2826]: Reading included configuration file>
+ 5월 30 10:22:36 studenj-virtual-machine xinetd[2826]: Reading included configuration file>
+ 5월 30 10:22:36 studenj-virtual-machine xinetd[2826]: Reading included configuration file>
+ 5월 30 10:22:36 studenj-virtual-machine xinetd[2826]: 2.3.15.3 started with libwrap loada>
+ 5월 30 10:22:36 studenj-virtual-machine xinetd[2826]: Started working: 1 available service
+lines 1-20/20 (END)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+● xinetd.service - LSB: Starts or stops the xinetd daemon.
+     Loaded: loaded (/etc/init.d/xinetd; generated)
+     Active: active (running) since Tue 2023-05-30 10:22:36 KST; 6s ago
+       Docs: man:systemd-sysv-generator(8)
+      Tasks: 1 (limit: 4575)
+     Memory: 496.0K
+        CPU: 102ms
+     CGroup: /system.slice/xinetd.service
+             └─2826 /usr/sbin/xinetd -pidfile /run/xinetd.pid -stayalive -inetd_compat -inetd_ipv6
+
+ 5월 30 10:22:36 studenj-virtual-machine xinetd[2826]: Reading included configuration file: /etc/xinetd.d/echo-udp [file=/etc/xinetd.d/echo-udp] [line=26]
+ 5월 30 10:22:36 studenj-virtual-machine xinetd[2826]: Reading included configuration file: /etc/xinetd.d/servers [file=/etc/xinetd.d/servers] [line=14]
+ 5월 30 10:22:36 studenj-virtual-machine xinetd[2826]: Reading included configuration file: /etc/xinetd.d/services [file=/etc/xinetd.d/services] [line=13]
+ 5월 30 10:22:36 studenj-virtual-machine xinetd[2826]: Reading included configuration file: /etc/xinetd.d/talnet [file=/etc/xinetd.d/talnet] [line=13]
+ 5월 30 10:22:36 studenj-virtual-machine xinetd[2826]: Attribute wait needs a space before operator [file=/etc/xinetd.d/talnet] [line=6]
+ 5월 30 10:22:36 studenj-virtual-machine xinetd[2826]: Reading included configuration file: /etc/xinetd.d/telnet [file=/etc/xinetd.d/telnet] [line=10]
+ 5월 30 10:22:36 studenj-virtual-machine xinetd[2826]: Reading included configuration file: /etc/xinetd.d/time [file=/etc/xinetd.d/time] [line=10]
+ 5월 30 10:22:36 studenj-virtual-machine xinetd[2826]: Reading included configuration file: /etc/xinetd.d/time-udp [file=/etc/xinetd.d/time-udp] [line=28]
+ 5월 30 10:22:36 studenj-virtual-machine xinetd[2826]: 2.3.15.3 started with libwrap loadavg labeled-networking options compiled in.
+ 5월 30 10:22:36 studenj-virtual-machine xinetd[2826]: Started working: 1 available service
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+root@studenj-virtual-machine:/etc/xinetd.d# rm talnet
+root@studenj-virtual-machine:/etc/xinetd.d# nano telnet
+root@studenj-virtual-machine:/etc/xinetd.d# systemctl restart xinetd
+root@studenj-virtual-machine:/etc/xinetd.d# systemctl status xinetd
+● xinetd.service - LSB: Starts or stops the xinetd daemon.
+     Loaded: loaded (/etc/init.d/xinetd; generated)
+     Active: active (running) since Tue 2023-05-30 10:24:16 KST; 3s ago
+       Docs: man:systemd-sysv-generator(8)
+    Process: 2938 ExecStart=/etc/init.d/xinetd start (code=exited, status=0/SUCCESS)
+      Tasks: 1 (limit: 4575)
+     Memory: 496.0K
+        CPU: 98ms
+     CGroup: /system.slice/xinetd.service
+             └─2948 /usr/sbin/xinetd -pidfile /run/xinetd.pid -stayalive -inetd_compat -inetd_ipv6
+
+ 5월 30 10:24:16 studenj-virtual-machine xinetd[2948]: Reading included configuration file: /etc/xinetd.d/discard-udp [file=/etc/xinetd.d/discard-udp] [line=25]
+ 5월 30 10:24:16 studenj-virtual-machine xinetd[2948]: Reading included configuration file: /etc/xinetd.d/echo [file=/etc/xinetd.d/echo] [line=14]
+ 5월 30 10:24:16 studenj-virtual-machine xinetd[2948]: Reading included configuration file: /etc/xinetd.d/echo-udp [file=/etc/xinetd.d/echo-udp] [line=26]
+ 5월 30 10:24:16 studenj-virtual-machine xinetd[2948]: Reading included configuration file: /etc/xinetd.d/servers [file=/etc/xinetd.d/servers] [line=14]
+ 5월 30 10:24:16 studenj-virtual-machine xinetd[2948]: Reading included configuration file: /etc/xinetd.d/services [file=/etc/xinetd.d/services] [line=13]
+ 5월 30 10:24:16 studenj-virtual-machine xinetd[2948]: Reading included configuration file: /etc/xinetd.d/telnet [file=/etc/xinetd.d/telnet] [line=13]
+ 5월 30 10:24:16 studenj-virtual-machine xinetd[2948]: Reading included configuration file: /etc/xinetd.d/time [file=/etc/xinetd.d/time] [line=10]
+ 5월 30 10:24:16 studenj-virtual-machine xinetd[2948]: Reading included configuration file: /etc/xinetd.d/time-udp [file=/etc/xinetd.d/time-udp] [line=28]
+ 5월 30 10:24:16 studenj-virtual-machine xinetd[2948]: 2.3.15.3 started with libwrap loadavg labeled-networking options compiled in.
+ 5월 30 10:24:16 studenj-virtual-machine xinetd[2948]: Started working: 1 available service
+root@studenj-virtual-machine:/etc/xinetd.d# systemctl enable xinetd
+xinetd.service is not a native service, redirecting to systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable xinetd
+root@studenj-virtual-machine:/etc/xinetd.d# 
